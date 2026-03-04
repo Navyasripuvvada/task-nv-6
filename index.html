@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Food Info</title>
+    <style>
+        body{
+            background-color:#FDE2FF; 
+        }
+        .hero-header{
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          margin:30px;
+          }
+
+        .hero{
+           font-family:'Georgia', serif;
+           color:#BF360C;
+           font-size:50px;
+        }
+
+        .fa-shopping-cart{
+           font-size:25px;
+        color:#BF360C;
+           }
+        .card{
+            border-radius: 10px;
+             border:1px solid gray;
+        }
+        .card img{
+            border-top-left-radius: 10px;
+            border-top-right-radius:10px;
+            height: 250px;
+            object-fit: cover;
+        }
+    
+        .card-body{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius:10px;
+             text-align: center;
+             background-color: #FDE2FF;;
+             color: #BF360C;
+        }
+        .container{
+            margin: 50px;
+        }
+    
+      #btn1{
+        background-color:#BF360C;
+      }
+      #btn1:hover{
+        background-color:#BF360C ;
+        font-size: 18px;
+      }
+    
+      .carousel-control-prev-icon,.carousel-control-next-icon{
+        background-color: black;
+        color: white;
+      }
+      .card .carousel-inner {
+       height: 250px;
+      }
+
+      .card .carousel-item,
+      .card .carousel-item img {
+       height: 250px;
+      }
+
+      .card .carousel-item img {
+       width: 100%;
+       object-fit: cover;
+      }
+      #btn5{
+        background-color: #BF360C ;
+        color: white;
+         border:none;
+        height: 37px;
+        width:65px;
+        border-radius: 5px;
+      }
+      #btn5:hover{
+          background-color: #BF360C;
+         font-size: 18px;
+      }
+      a{
+        color: #BF360C;
+      }
+     .buttons{
+        display:flex;
+        justify-content:center;
+        gap:10px;
+       flex-wrap:wrap;
+        }
+     
+
+    </style>
+</head>
+<html>
+<body>
+    <div class="hero-header">
+        <h1 class="hero">French Fries, Ice creams & Cup Cakes</h1>
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    <div id="cartMessage" class="alert alert-success text-center d-none" role="alert">
+    Item added to cart successfully! 🛒
+    </div>
+    
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="card" style="max-width: 400px;">
+                    <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://media.istockphoto.com/id/614420426/photo/basket-of-french-fries.jpg?s=612x612&w=0&k=20&c=o6IZg_NPJkOaICTa883jd49BwZvvI7wlP6SnjhyxqsI=" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://moonandspoonandyum.com/wp-content/uploads/2024/08/baked-french-fries-recipe.jpg"  class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.immediate.co.uk/production/volatile/sites/30/2021/03/French-fries-b9e3e0c.jpg?resize=768,713" class="d-block w-100">
+                            </div>
+                        </div>
+                        <button type="button"  class="carousel-control-prev" data-bs-target="#mycarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button type="button" class="carousel-control-next" data-bs-target="#mycarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">FrenchFries</h1>
+                        <p class="card-text">Hot and crunchy</p>
+                        <div class="buttons" class="col-lg-4 col-md-6 col-sm-12">
+                            <a href="frenchfries.html" class="btn text-white" id="btn1">More</a>
+                            <button type="button" id="btn5" onclick="addToCart('frenchfries',100,'images/frenchfries.jpg')">Add</button>
+                            <span id="quantityfrenchfries">Qty:</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="card" style="max-width: 400px;" >
+                     <div id="mycarousel1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://www.southernliving.com/thmb/EBBY00OUG-AgOn3N1lANR0JkaFI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Strawberry_Shortcake_IceCream_010-0820b2a72950463999a5ce1723c12c2c.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://revivecafe.in/wp-content/uploads/2025/08/chocolate-ice-cream.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://agronfoodprocessing.com/wp-content/uploads/2024/04/24.jpg" class="d-block w-100">
+                            </div>
+                        </div>
+                        <button type="button"  class="carousel-control-prev" data-bs-target="#mycarousel1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button type="button" class="carousel-control-next" data-bs-target="#mycarousel1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">Ice Cream</h1>
+                        <p class="card-text">Rich milky indulgence.</p>
+                        <div class="buttons"  class="col-lg-4 col-md-6 col-sm-12">
+                            <a href="icecreams.html" class="btn text-white" id="btn1">More</a>
+                            <button type="button" id="btn5" onclick="addToCart('Ice Cream',150,'images/icecreams.jpg')">Add</button>
+                            <span id="quantityIce Cream">Qty:</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="card" style="max-width: 400px;">
+                   
+                     <div id="mycarousel2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://www.shutterstock.com/image-photo/cupcakes-pink-frosting-colorful-sprinkles-600nw-2594528165.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUI4CNO8u1DGvVKaNpzz_fXbaU3xaVw0T7og&s" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://thumbs.dreamstime.com/b/valentine-red-velvet-cupcakes-cream-frosting-heart-decorations-homemade-red-velvet-cupcakes-topped-smooth-whipped-438144271.jpg" class="d-block w-100">
+                            </div>
+                        </div>
+                        <button type="button"  class="carousel-control-prev" data-bs-target="#mycarousel2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button type="button" class="carousel-control-next" data-bs-target="#mycarousel2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">CupCakes</h1>
+                        <p class="card-text">Fluffy baked goodness</p>
+                       <div class="buttons"  class="col-lg-4 col-md-6 col-sm-12">
+                            <a href="cupcakes.html" class="btn text-white" id="btn1">More</a>
+                            <button type="button" id="btn5" onclick="addToCart('CupCakes',80,'images/cupcakes.jpg')">Add</button>
+                            <span id="quantityCupCakes">Qty:</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+function addToCart(name, price, image) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+        });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    showMessage(); 
+    updateQuantity(name); 
+}
+function showMessage() {
+
+    let message = document.getElementById("cartMessage");
+
+    message.classList.remove("d-none");
+
+    setTimeout(() => {
+        message.classList.add("d-none");
+    }, 2000); }
+function updateQuantity(name){
+     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+     let item = cart.find(product => product.name === name);
+    if(item){
+    document.getElementById("quantity"+name).innerText =`Qty: ${item.quantity}`;
+    }
+}
+ 
+  window.onload=function(){
+    updateQuantity("frenchfries");
+    updateQuantity("Ice Cream")
+    updateQuantity("CupCakes")
+  }
+   
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
